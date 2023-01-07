@@ -1,57 +1,18 @@
-<p align="center">
-  <a href="https://livethelife.tv">
-    <img alt="Search the Bankless HQ Podcast using AI" src="/public/social.jpg" width="600">
-  </a>
-</p>
 
 # YouTube Semantic Search <!-- omit in toc -->
 
-> OpenAI-powered semantic search for any YouTube playlist — featuring the [All-In Podcast](https://all-in-on-ai.vercel.app) 🔥
+> OpenAI-powered semantic search for any YouTube playlist — featuring the [Bankless Podcast](https://ai.vercel.app) 🔥
 
 [![Build Status](https://github.com/transitive-bullshit/yt-channel-search/actions/workflows/test.yml/badge.svg)](https://github.com/transitive-bullshit/yt-channel-search/actions/workflows/test.yml) [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/transitive-bullshit/yt-channel-search/blob/main/license) [![Prettier Code Formatting](https://img.shields.io/badge/code_style-prettier-brightgreen.svg)](https://prettier.io)
 
-- [Intro](#intro)
-- [Example Queries](#example-queries)
-- [Screenshots](#screenshots)
-- [How It Works](#how-it-works)
-- [TODO](#todo)
-- [Feedback](#feedback)
-- [Credit](#credit)
-- [License](#license)
 
 ## Intro
 
-I love the [All-In Podcast](https://www.youtube.com/channel/UCESLZhusAkFfsNsApnjF_Cg). But search and discovery with podcasts can be really challenging.
-
-I built this project to solve this problem... and I also wanted to play around with cool AI stuff. 😂
+I love the [Bankless Podcast](https://www.youtube.com/channel/). But search and discovery with podcasts can be really challenging... and I also wanted to play around with cool AI stuff. 😂
 
 This project uses the latest models from [OpenAI](https://openai.com/) to build a semantic search index across every episode of the Pod. It allows you to find your favorite moments with Google-level accuracy and rewatch the exact clips you're interested in.
 
-You can use it to power advanced search across _any YouTube channel or playlist_. The demo uses the [All-In Podcast](https://www.youtube.com/channel/UCESLZhusAkFfsNsApnjF_Cg) because it's my favorite 💕, but it's designed to work with any playlist.
-
-## Example Queries
-
-- [sweater karen](https://all-in-on-ai.vercel.app/?query=sweater+karen)
-- [best advice for founders](https://all-in-on-ai.vercel.app/?query=best+advice+for+founders)
-- [poker story from last night](https://all-in-on-ai.vercel.app/?query=poker+story+from+last+night)
-- [crypto scam ponzi scheme](https://all-in-on-ai.vercel.app/?query=crypto+scam+ponzi+scheme)
-- [luxury sweater chamath](https://all-in-on-ai.vercel.app/?query=luxury+sweater+chamath)
-- [phil helmuth](https://all-in-on-ai.vercel.app/?query=phil+helmuth)
-- [intellectual honesty](https://all-in-on-ai.vercel.app/?query=intellectual+honesty)
-- [sbf ftx](https://all-in-on-ai.vercel.app/?query=sbf+ftx)
-- [science corner](https://all-in-on-ai.vercel.app/?query=science+corner)
-
-## Screenshots
-
-<p align="center">
-  <a href="https://all-in-on-ai.vercel.app">
-    <img alt="Desktop light mode" src="/public/images/screenshot-desktop-light.jpg" width="45%">
-  </a>
-&nbsp; &nbsp; &nbsp; &nbsp;
-  <a href="https://all-in-on-ai.vercel.app">
-    <img alt="Desktop dark mode" src="/public/images/screenshot-desktop-dark.jpg" width="45%">
-  </a>
-</p>
+You can use it to power advanced search across _any YouTube channel or playlist_. 
 
 ## How It Works
 
@@ -63,7 +24,7 @@ Under the hood, it uses:
 - [Vercel](https://vercel.com) - Hosting and API functions
 - [Next.js](https://nextjs.org) - React web framework
 
-We use Node.js and the [YouTube API v3](https://developers.google.com/youtube/v3/getting-started) to fetch the videos of our target playlist. In this case, we're focused on the [All-In Podcast Episodes Playlist](https://www.youtube.com/playlist?list=PLn5MTSAqaf8peDZQ57QkJBzewJU1aUokl), which contains 108 videos at the time of writing.
+We use Node.js and the [YouTube API v3](https://developers.google.com/youtube/v3/getting-started) to fetch the videos of our target playlist. In this case, we're focused on the [Bankless Podcast Episodes Playlist](https://www.youtube.com/playlist?list=PLmkdAgtxf3ah0Vmyy1B3OU8BPacX4_gVY).
 
 ```bash
 npx tsx src/bin/resolve-yt-playlist.ts
@@ -102,21 +63,9 @@ The frontend is a [Next.js](https://nextjs.org) webapp deployed to [Vercel](http
 - Use [Whisper](https://github.com/m-bain/whisperX) for better transcriptions
 - Support sorting by recency vs relevancy
 
-## Feedback
-
-Have an idea on how this webapp could be improved? Find a particularly fun search query?
-
-Feel free to send me feedback, either on [GitHub](https://github.com/transitive-bullshit/yt-semantic-search/issues/new) or [Twitter](https://twitter.com/transitive_bs). 💯
 
 ## Credit
 
 - Inspired by [Riley Tomasek's project](https://twitter.com/rileytomasek/status/1603854647575384067) for searching the [Huberman YouTube Channel](https://www.youtube.com/@hubermanlab)
-- Note that this project is not affiliated with the All-In Podcast. It just pulls data from their [YouTube channel](https://www.youtube.com/channel/UCESLZhusAkFfsNsApnjF_Cg) and processes it using AI.
+- Note that this project is not affiliated with the Bankless Podcast. It just pulls data from their [YouTube channel](https://www.youtube.com/channel/) and processes it using AI.
 
-## License
-
-MIT © [Travis Fischer](https://transitivebullsh.it)
-
-If you found this project interesting, please consider [sponsoring me](https://github.com/sponsors/transitive-bullshit) or <a href="https://twitter.com/transitive_bs">following me on twitter <img src="https://storage.googleapis.com/saasify-assets/twitter-logo.svg" alt="twitter" height="24px" align="center"></a>
-
-The API and server costs add up over time, so if you can spare it, [sponsoring on Github](https://github.com/sponsors/transitive-bullshit) is greatly appreciated. 💕
